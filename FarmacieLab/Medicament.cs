@@ -3,15 +3,15 @@ namespace FarmacieLab
 {
     public class Medicament
     {
-            string denumire;
-            int pret;
-            bool necesitaReteta;
+            public string denumire { get; set; }
+            public int pret { get; set; }
+            public bool necesitaReteta { get; set; }
 
             public Medicament()
             {
                 denumire = string.Empty;
                 pret = 0;
-            necesitaReteta = false;
+                necesitaReteta = false;
 
 
             }
@@ -27,6 +27,8 @@ namespace FarmacieLab
             {
                 return $"Denumirea medicamentului: {denumire}, Pretul medicamentului: {pret} , Reteta: {necesitaReteta}";
             }
+
+       
         
     }
 }
