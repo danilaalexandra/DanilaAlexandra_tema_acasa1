@@ -26,5 +26,6 @@ namespace NivelStocareDate
             nrClienti = this.nrClienti;
             return clienti;
         }
+        
     }
 }
