@@ -9,6 +9,10 @@ class Program
         static void Main()
         {
 
+        string numeFisier = ConfigurationManager.AppSettings["NumeFisier"];
+        string locatieFisierSolutie = Directory.GetParent(System.IO.Directory.GetCurrentDirectory()).Parent.Parent.FullName;
+        string caleCompletaFisier = locatieFisierSolutie + "\\" + numeFisier;
+
         //Client client1 = Citeste_tastatura_c();
 
         // Console.WriteLine(client1.Info());
