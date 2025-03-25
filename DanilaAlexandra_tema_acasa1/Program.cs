@@ -149,7 +149,29 @@ class Program
         string raspuns = Console.ReadLine().ToLower();
         bool necesitaReteta = raspuns == "da";
 
-        return new Medicament(denumire, pret, necesitaReteta);
+        Console.WriteLine("Alegeti din ce categorie face parte medicamentul: ");
+        Console.WriteLine("1 - Analgezice \n" +
+        "2 - Antibiotice \n" +
+        "3 - Antimicrobiene \n" +
+        "4 - Cardiovasculare \n" +
+        "5 - Respiratorii \n" +
+        "6 - Gastrointestinale \n"+
+        "7 - Psihiatrice \n" +
+        "8- Hormonale ");
+        
+
+        string opt = Console.ReadLine();
+        bool valid = Enum.TryParse(opt, out Categorie cat);
+        if (valid && Enum.IsDefined(typeof(Categorie), cat)) ;
+        {
+
+            Medicament medicament = new Medicament(denumire, pret, necesitaReteta);
+            medicament.categorie = cat;
+            return medicament;
+        }
+
+
+        
     }
     static Client Citeste_tastatura_c()
     {

@@ -49,5 +49,19 @@
 
             return obiectClientPentruFisier;
         }
+        private bool ValidareNume(string nume)
+        {
+            if (nume == "" || nume == " ")
+                return false;
+            else return true;
+        }
+        private bool ValidarePrenume(string prenume)
+        {
+            if (prenume == "" || prenume == " ")
+                return false;
+            else return true;
+        }
+
+      
     }
 }

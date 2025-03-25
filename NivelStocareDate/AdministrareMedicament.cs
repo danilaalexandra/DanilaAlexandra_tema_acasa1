@@ -27,5 +27,19 @@ namespace NivelStocareDate
             return medicamente;
         }
 
+        public static Medicament[] cautareINdenumire(Medicament[] medicamente, string cuvantCautat)
+        {
+            List<Medicament> rezultate = new List<Medicament>();
+
+            foreach (var medicament in medicamente)
+            {
+                if (medicament != null && medicament.denumire.Contains(cuvantCautat, StringComparison.OrdinalIgnoreCase))
+                {
+                    rezultate.Add(medicament);
+                }
+            }
+            return rezultate.ToArray();
+        }
+
     }
 }

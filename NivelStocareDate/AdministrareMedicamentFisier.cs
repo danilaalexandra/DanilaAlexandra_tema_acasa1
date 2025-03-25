@@ -38,7 +38,7 @@ namespace NivelStocareDate
                 string linieFisier;
                 nrMedicamente = 0;
 
-                // citeste cate o linie si creaza un obiect de tip Student
+                // citeste cate o linie si creaza un obiect 
                 // pe baza datelor din linia citita
                 while ((linieFisier = streamReader.ReadLine()) != null)
                 {
