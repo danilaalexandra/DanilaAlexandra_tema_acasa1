@@ -63,21 +63,13 @@ namespace FarmacieLab
 
             return obiectMedicamentPentruFisier;
         }
-        private bool ValideazaPret(int pret)
+        
+        public static bool ValidareDenumire(string denumire)
         {
-            if (pret > 0)
-            {
-                return true;
-            }
-
-            return false;
-        }
-
-        private bool ValidareDenumire(string denumire)
-        {
-            if (denumire == "" || denumire == " ")
+            if (string.IsNullOrWhiteSpace(denumire))
                 return false;
             else return true;
+
         }
     }
 }

@@ -140,8 +140,12 @@ class Program
     }
     static Medicament Citeste_tastatura_m()
     {
-        Console.WriteLine("Introduceti denumirea medicamentului: ");
-        string denumire = Console.ReadLine();
+        string denumire="" ;
+        while (Medicament.ValidareDenumire(denumire) != true)
+        {
+            Console.WriteLine("Introduceti denumirea medicamentului: ");
+            denumire = Console.ReadLine();
+        }
         Console.WriteLine("Introduceti pretul medicamentului: ");
         int pret;
         while (!int.TryParse(Console.ReadLine(), out pret) || pret < 0)
@@ -179,10 +183,19 @@ class Program
     }
     static Client Citeste_tastatura_c()
     {
-        Console.WriteLine("Introduceti numele clientului: ");
-        string nume = Console.ReadLine();
-        Console.WriteLine("Introduceti prenumele clientului: ");
-        string prenume = Console.ReadLine();
+        string nume = "";
+        while (Client.ValidareNume(nume) != true)
+        {
+            Console.WriteLine("Introduceti numele clientului: ");
+            nume = Console.ReadLine();
+        }
+
+        string prenume = "";
+        while (Client.ValidarePrenume(prenume) != true)
+        {
+            Console.WriteLine("Introduceti prenumele clientului: ");
+            prenume = Console.ReadLine();
+        }
         DateOnly dataNasterii;
         Console.WriteLine("Introduceti data nasterii a clientului: ");
         string data = Console.ReadLine();

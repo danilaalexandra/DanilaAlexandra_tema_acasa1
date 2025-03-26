@@ -49,15 +49,15 @@
 
             return obiectClientPentruFisier;
         }
-        private bool ValidareNume(string nume)
+        public static bool ValidareNume(string nume)
         {
-            if (nume == "" || nume == " ")
+            if (string.IsNullOrWhiteSpace(nume))
                 return false;
             else return true;
         }
-        private bool ValidarePrenume(string prenume)
+        public static bool ValidarePrenume(string prenume)
         {
-            if (prenume == "" || prenume == " ")
+            if (string.IsNullOrWhiteSpace(prenume))
                 return false;
             else return true;
         }
